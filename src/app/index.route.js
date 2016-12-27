@@ -1,8 +1,9 @@
-export function routerConfig($componentLoaderProvider) {
+export function routerConfig($componentLoaderProvider, $locationProvider) {
   'ngInject';
   $componentLoaderProvider.setTemplateMapping(function(name) {
     return `app/${ name }/views/${ name }.html`;
   });
+  $locationProvider.html5Mode(true);
 }
 /**
  *
